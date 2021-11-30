@@ -1,0 +1,56 @@
+insert into alkalmazott values(101,'Kovács János','férfi','Budapest','Petőfi utca 12');
+insert into alkalmazott values(102,'Szabó Bianka','nő','Miskolc','Kék utca 3');
+insert into alkalmazott values(103,'Lakatos Rómeó','férfi','Budapest','Ártér utca 26');
+insert into alkalmazott values(104,'Kiss Tamás','férfi','Sárospatak','Nádor utca 7');
+insert into alkalmazott values(105,'Kovács Anna','nő','Miskoc','Tökmag utca 17');
+
+insert into darab values(10,1);
+insert into darab values(20,2);
+insert into darab values(30,4);
+insert into darab values(40,5);
+insert into darab values(50,8);
+
+insert into felhasználó values(11,'Sárkányosgyerek','gyerek@freemail.hu','012345');
+insert into felhasználó values(12,'Tihamér_Renáta','Renata12@gmail.com','tih4m3r');
+insert into felhasználó values(13,'SzakátsZoli','Zoltan1@citromail.hu','Z0l123');
+insert into felhasználó values(14,'Névtelen','Anonymus34@freemail.hu','banánhéj');
+insert into felhasználó values(15,'Varga Géza','Vgéza44@protomail.com','Vgéza_44');
+insert into felhasználó values(16,'Sanyi','Sándor83@gmail.hu','83Sándi');
+insert into felhasználó values(17,'Motormester16','Racztamas@freemail.hu','Motros');
+insert into felhasználó values(18,'Tóth_Milán','TMilan@gmail.com','tmilan');
+insert into felhasználó values(19,'KovacsDavid','DavidaKov@citromail.com','Kovid');
+
+insert into szolgáltatás values(1001,'fotókidolgozás',250,1,101);
+insert into szolgáltatás values(1002,'kép digitalizálás',200,1,101);
+insert into szolgáltatás values(1003,'Portfólió készítés',1000,2,102);
+insert into szolgáltatás values(1004,'fotó retusálás',500,1,102);
+insert into szolgáltatás values(1005,'fotókönyv készítés',10000,1,103);
+insert into szolgáltatás values(1006,'Ballagási fotózás',20000,5,103);
+insert into szolgáltatás values(1007,'esküvői fotózás',50000,1,104);
+insert into szolgáltatás values(1008,'Igazolványkép készítés',2500,4,104);
+insert into szolgáltatás values(1009,'Igazolványkép készítés',5000,8,104);
+insert into szolgáltatás values(1010,'Gyermek és család fotózás',5000,1,105);
+
+insert into megrendelés values(1100,14,1003,'igen');
+insert into megrendelés values(1200,11,1009,null);
+insert into megrendelés values(1300,15,1006,'igen');
+insert into megrendelés values(1400,17,1002,'igen');
+insert into megrendelés values(1500,18,1003,null);
+insert into megrendelés values(1600,16,1010,'igen');
+insert into megrendelés values(1700,13,1004,null);
+insert into megrendelés values(1800,14,1005,null);
+insert into megrendelés values(1900,17,1010,null);
+
+insert into kép values(1111,'feljavított kép','10X15','https://1111kepjav.hu',1003);
+insert into kép values(2222,'naplemente','30X40','https://naplem2222ente.com',1001);
+insert into kép values(3333,'Család1','15X20','https://www.csaladi102322.hu',1010);
+insert into kép values(4444,'igk fotó','9X13','https://www.foto.igazolvany.com',1009);
+insert into kép values(5555,'Lajos és Zsófia esküvője','15X20','https://www.eskuvo.Hlajos1265.hu',1007);
+insert into kép values(6666,'Portfolio12','10X15','https://foliop.12.com',1003);
+insert into kép values(7777,'Család2','15X20','https://www.csal4d102356.hu',1010);
+
+insert into értékelés values(9991,'Névtelen',1111,5,'Nagyon szép kép lett!',3);
+insert into értékelés values(9992,'Sanyi',4444,4,'Jo lett',null);
+insert into értékelés values(9993,'Varga Géza',1111,3,'Ez egy átlagos kép,többre számítottam',null);
+insert into értékelés values(9994,'Sárkányosgyerek',7777,5,'Király kép lett',1);
+insert into értékelés values(9995,'Sanyi',2222,2,'Nem sikerült valami jol',2);

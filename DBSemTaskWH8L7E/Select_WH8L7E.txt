@@ -1,0 +1,10 @@
+select felhasználónév from felhasználó;
+select * from szolgáltatás where ár>1500;
+select count(ékód) from értékelés;
+select min(ár) from szolgáltatás;
+select név,város,utca from alkalmazott where név like 'Kovács %';
+select képnév,link from kép inner join szolgáltatás on kép.szolgáltatás=szolgáltatás.szkód where szolgáltatás.típus='Gyermek és család fotózás';
+select felhasználónév from felhasználó inner join megrendelés on felhasználó.fkód=megrendelés.felhasználó where megrendelés.befizet='igen';
+select név,szolgáltatás.típus from alkalmazott inner join szolgáltatás on alkalmazott.akód=szolgáltatás.alkalmazott;
+select felhasználónév,email from felhasználó inner join értékelés on felhasználó.felhasználónév=értékelés.felhasználó order by értékelés.tetszésnyilvánítások_száma desc limit 1;
+select név,szolgáltatás.típus from kép inner join  szolgáltatás on kép.szolgáltatás=szolgáltatás.szkód inner join alkalmazott on szolgáltatás.alkalmazott=alkalmazott.akód where alkalmazott.név='Szabó Bianka' group by alkalmazott.név;

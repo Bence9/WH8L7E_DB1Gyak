@@ -1,0 +1,51 @@
+create table alkalmazott(
+akód int primary key not null,
+név varchar(30),
+nem varchar(6),
+város varchar(30),
+utca varchar(30)
+);
+
+create table darab(
+dkód int primary key not null,
+darabszám int unique
+);
+
+create table felhasználó(
+fkód int primary key not null,
+felhasználónév varchar(30) unique,
+email varchar(30),
+jelszó varchar(20)
+);
+
+create table szolgáltatás(
+szkód int primary key not null, 
+típus varchar(30),
+ár int not null,
+darab int, Foreign key(darab) references darab(darabszám),
+alkalmazott int,Foreign key(alkalmazott) references alkalmazott(akód)
+);
+
+create table megrendelés(
+rkód int primary key not null,
+felhasználó int,Foreign key(felhasználó) references felhasználó(fkód),
+szolgáltatás int,Foreign key(szolgáltatás) references szolgáltatás(szkód),
+befizet varchar(5)
+);
+
+create table kép(
+kkód int primary key not null,
+képnév varchar(30),
+méret varchar(10),
+link varchar(30),
+szolgáltatás int,Foreign key (szolgáltatás) references szolgáltatás(szkód)
+);
+
+create table értékelés(
+ékód int primary key not null,
+felhasználó varchar(30),Foreign key (felhasználó) references felhasználó(felhasználónév),
+kép int,Foreign key(kép) references kép(kkód),
+pont int not null,
+üzenet varchar(50),
+tetszésnyilvánítások_száma int
+);
